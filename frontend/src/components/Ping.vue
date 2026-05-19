@@ -4,10 +4,10 @@ import {Events} from "@wailsio/runtime";
 import {PingService} from "../../bindings/changeme";
 
 const name = ref('')
-const result = ref('Please enter your name below 👇')
+const result = ref('Please enter IP Address below')
 const time = ref('Listening for Time event...')
 
-const doGreet = () => {
+const doPing = () => {
   let localName = name.value;
   if (!localName) {
     localName = 'anonymous';
@@ -38,7 +38,7 @@ defineProps({
   <div class="card">
     <div class="input-box">
       <input aria-label="input" class="input" v-model="name" type="text" autocomplete="off"/>
-      <button aria-label="greet-btn" class="btn" @click="doGreet">Greet</button>
+      <button aria-label="greet-btn" class="btn" @click="doPing">Ping</button>
     </div>
   </div>
 

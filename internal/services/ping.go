@@ -8,10 +8,10 @@ import (
 
 type PingService struct{}
 
-func (p *PingService) Ping(host string, count int) (string, error) {
+func (p *PingService) Ping(host string, count int) (*probing.Statistics, error) {
 	pinger, err := probing.NewPinger(host)
 	if err != nil {
-		return "", fmt.Errorf("%v", err) 
+		return nil, fmt.Errorf("%v", err) 
 	}
 	
 	pinger.Count = 3
@@ -19,10 +19,12 @@ func (p *PingService) Ping(host string, count int) (string, error) {
 
 	err = pinger.Run()
 	if err != nil {
-		return "", fmt.Errorf("%v", err)
+		return nil, fmt.Errorf("%v", err)
 	}
 
 	stats := pinger.Statistics()
 
 	return stats, nil
 }
+
+
