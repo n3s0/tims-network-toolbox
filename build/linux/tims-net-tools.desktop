@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=tims-net-tools
+Exec=tims-net-tools
+Icon=tims-net-tools
+Categories=Development;
+Terminal=false
+Keywords=wails
+Version=1.0
+StartupNotify=false

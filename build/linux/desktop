@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=My Product
+Comment=A tims-net-tools application
+# The Exec line includes %u to pass the URL to the application
+Exec=/usr/local/bin/tims-net-tools %u
+Terminal=false
+Type=Application
+Icon=tims-net-tools
+Categories=Utility;
+StartupWMClass=tims-net-tools
+
+ 
